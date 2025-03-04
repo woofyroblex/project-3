@@ -1,0 +1,55 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+   package="com.example.crew">
+    <application
+        android:label="myapp"
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true">
+        
+        <!-- ✅ Enable software rendering to fix OpenGL ES API issues -->
+        <meta-data android:name="io.flutter.embedding.android.EnableSoftwareRendering" android:value="true"/>
+        
+        <!-- ✅ Disable Impeller rendering (Fixes emulator crashes) -->
+        <meta-data android:name="io.flutter.embedding.android.EnableImpeller" android:value="false"/>
+
+        <!-- ✅ Ensure Flutter uses OpenGL as the renderer -->
+        <meta-data android:name="flutter.renderer" android:value="opengl" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            
+            <!-- ✅ Enable back navigation callback -->
+            <meta-data
+                android:name="android:enableOnBackInvokedCallback"
+                android:value="true" />
+
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme" />
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    
+    <!-- ✅ Required for text processing -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+</manifest>
