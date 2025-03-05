@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class RecentActivity extends StatelessWidget {
   final List<String> activities;
 
-  const RecentActivity({required this.activities, Key? key}) : super(key: key);
+  const RecentActivity({required this.activities, super.key});
 
   @override
   Widget build(BuildContext context) {

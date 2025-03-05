@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:lafa/models/subscription_model.dart';
+import 'package:myapp/models/subscription_model.dart';
 
 class SubscriptionService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;

@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:lafa/screens/main/subscription_screen.dart';
-import 'package:lafa/screens/main/payment_screen.dart';
-import 'package:lafa/screens/main/report_lost_item_screen.dart';
-import 'package:lafa/screens/main/found_item_screen.dart';
-import 'package:lafa/screens/main/notifications_screen.dart';
-import 'package:lafa/screens/main/history_screen.dart';
-import 'package:lafa/screens/main/my_reports_screen.dart';
-import 'package:lafa/screens/main/search_items_screen.dart';
-import 'package:lafa/screens/admin/admin_dashboard_screen.dart';
-import 'package:lafa/screens/admin/report_management_screen.dart';
-import 'package:lafa/screens/admin/transaction_management_screen.dart';
-import 'package:lafa/screens/admin/user_management_screen.dart';
-import 'package:lafa/screens/ai/ai_image_enhancement_screen.dart';
-import 'package:lafa/screens/ai/ai_matching_screen.dart';
-import 'package:lafa/screens/auth/login_screen.dart';
-import 'package:lafa/screens/auth/signup_screen.dart';
-import 'package:lafa/screens/business/business_partners_screen.dart';
-import 'package:lafa/screens/community/community_watch_screen.dart';
-import 'package:lafa/screens/law_enforcement/police_integration_screen.dart';
-import 'package:lafa/screens/main/dashboard_screen.dart';
-import 'package:lafa/screens/main/profile_screen.dart';
-import 'package:lafa/screens/main/settings_screen.dart';
+import 'package:myapp/screens/main/subscription_screen.dart';
+import 'package:myapp/screens/main/payment_screen.dart';
+import 'package:myapp/screens/main/report_lost_item_screen.dart';
+import 'package:myapp/screens/main/found_item_screen.dart';
+import 'package:myapp/screens/main/notifications_screen.dart';
+import 'package:myapp/screens/main/history_screen.dart';
+import 'package:myapp/screens/main/my_reports_screen.dart';
+import 'package:myapp/screens/main/search_items_screen.dart';
+import 'package:myapp/screens/admin/admin_dashboard_screen.dart';
+import 'package:myapp/screens/admin/report_management_screen.dart';
+import 'package:myapp/screens/admin/transaction_management_screen.dart';
+import 'package:myapp/screens/admin/user_management_screen.dart';
+import 'package:myapp/screens/ai/ai_image_enhancement_screen.dart';
+import 'package:myapp/screens/ai/ai_matching_screen.dart';
+import 'package:myapp/screens/auth/login_screen.dart';
+import 'package:myapp/screens/auth/signup_screen.dart';
+import 'package:myapp/screens/business/business_partners_screen.dart';
+import 'package:myapp/screens/community/community_watch_screen.dart';
+import 'package:myapp/screens/law_enforcement/police_integration_screen.dart';
+import 'package:myapp/screens/main/dashboard_screen.dart';
+import 'package:myapp/screens/main/profile_screen.dart';
+import 'package:myapp/screens/main/settings_screen.dart';
 // Added missing import
 
 class AppRoutes {
@@ -46,7 +46,9 @@ class AppRoutes {
   static const String dashboard = '/dashboard';
   static const String profile = '/profile';
   static const String settings = '/settings';
-  static const String searchItems = '/search-items'; // Added missing route
+  static const String searchItems = '/search-items';
+
+  static var routes; // Added missing route
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {

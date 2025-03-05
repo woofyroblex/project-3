@@ -9,14 +9,14 @@ class AuthTextField extends StatelessWidget {
   final IconData? prefixIcon;
 
   const AuthTextField({
-    Key? key,
+    super.key,
     required this.controller,
     required this.labelText,
     this.validator,
     this.obscureText = false,
     this.keyboardType = TextInputType.text,
     this.prefixIcon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

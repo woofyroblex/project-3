@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 class NotificationIcon extends StatelessWidget {
   final int unreadCount;
 
-  const NotificationIcon({required this.unreadCount, Key? key})
-      : super(key: key);
+  const NotificationIcon({required this.unreadCount, super.key});
 
   @override
   Widget build(BuildContext context) {

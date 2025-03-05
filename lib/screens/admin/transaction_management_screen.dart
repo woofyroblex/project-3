@@ -3,14 +3,14 @@ import '../../services/payment_service.dart';
 import '../../models/transaction_model.dart';
 
 class TransactionManagementScreen extends StatefulWidget {
-  const TransactionManagementScreen({Key? key}) : super(key: key);
+  const TransactionManagementScreen({super.key});
 
   @override
-  _TransactionManagementScreenState createState() =>
-      _TransactionManagementScreenState();
+  TransactionManagementScreenState createState() =>
+      TransactionManagementScreenState();
 }
 
-class _TransactionManagementScreenState
+class TransactionManagementScreenState
     extends State<TransactionManagementScreen> {
   final PaymentService _paymentService = PaymentService();
   List<TransactionModel> _transactions = [];

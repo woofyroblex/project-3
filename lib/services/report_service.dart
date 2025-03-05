@@ -1,6 +1,6 @@
 // report_service.dart
-import 'package:lafa/models/lost_item_model.dart';
-import 'package:lafa/models/found_item_model.dart';
+import 'package:myapp/models/lost_item_model.dart';
+import 'package:myapp/models/found_item_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ReportService {

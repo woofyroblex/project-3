@@ -10,8 +10,8 @@ class DashboardCard extends StatelessWidget {
     required this.title,
     required this.icon,
     required this.onTap,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

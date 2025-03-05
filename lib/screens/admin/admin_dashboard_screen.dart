@@ -9,13 +9,13 @@ import '../../widgets/transaction_list.dart';
 import '../../widgets/reports_list.dart';
 
 class AdminDashboardScreen extends StatefulWidget {
-  const AdminDashboardScreen({Key? key}) : super(key: key);
+  const AdminDashboardScreen({super.key});
 
   @override
-  _AdminDashboardScreenState createState() => _AdminDashboardScreenState();
+  AdminDashboardScreenState createState() => AdminDashboardScreenState();
 }
 
-class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
+class AdminDashboardScreenState extends State<AdminDashboardScreen> {
   final AdminService _adminService = AdminService();
   Map<String, dynamic>? _dashboardStats;
   List<UserModel> _recentUsers = [];

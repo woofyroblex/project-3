@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 class RecentUsersList extends StatelessWidget {
   final List<UserModel> users;
 
-  const RecentUsersList({Key? key, required this.users}) : super(key: key);
+  const RecentUsersList({super.key, required this.users});
 
   @override
   Widget build(BuildContext context) {

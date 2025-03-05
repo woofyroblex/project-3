@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CommunityWatchScreen extends StatefulWidget {
+  const CommunityWatchScreen({super.key});
+
   @override
-  _CommunityWatchScreenState createState() => _CommunityWatchScreenState();
+  CommunityWatchScreenState createState() => CommunityWatchScreenState();
 }
 
-class _CommunityWatchScreenState extends State<CommunityWatchScreen> {
+class CommunityWatchScreenState extends State<CommunityWatchScreen> {
   List<Map<String, dynamic>> reports = [
     {
       'title': 'Lost Wallet',

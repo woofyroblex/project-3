@@ -4,14 +4,13 @@ import 'package:flutter/material.dart';
 class FaceVerificationScreen extends StatefulWidget {
   final Function(bool) onVerificationComplete;
 
-  const FaceVerificationScreen({Key? key, required this.onVerificationComplete})
-      : super(key: key);
+  const FaceVerificationScreen({super.key, required this.onVerificationComplete});
 
   @override
-  _FaceVerificationScreenState createState() => _FaceVerificationScreenState();
+  FaceVerificationScreenState createState() => FaceVerificationScreenState();
 }
 
-class _FaceVerificationScreenState extends State<FaceVerificationScreen> {
+class FaceVerificationScreenState extends State<FaceVerificationScreen> {
   bool _isVerifying = false;
 
   void _startFaceVerification() async {

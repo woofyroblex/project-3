@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:lafa/services/notification_service.dart';
+import 'package:myapp/services/notification_service.dart';
 
 class NotificationsScreen extends StatelessWidget {
+  const NotificationsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

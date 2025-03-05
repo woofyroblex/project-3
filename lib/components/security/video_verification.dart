@@ -6,15 +6,14 @@ class VideoVerificationScreen extends StatefulWidget {
   final String videoUrl;
 
   const VideoVerificationScreen(
-      {Key? key, required this.onVerificationComplete, required this.videoUrl})
-      : super(key: key);
+      {super.key, required this.onVerificationComplete, required this.videoUrl});
 
   @override
-  _VideoVerificationScreenState createState() =>
-      _VideoVerificationScreenState();
+  VideoVerificationScreenState createState() =>
+      VideoVerificationScreenState();
 }
 
-class _VideoVerificationScreenState extends State<VideoVerificationScreen> {
+class VideoVerificationScreenState extends State<VideoVerificationScreen> {
   bool _isVerifying = false;
 
   void _verifyVideo() async {

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart' show debugPrint;
-import 'package:lafa/models/enums.dart';
+import 'package:myapp/models/enums.dart';
 import '../models/transaction_model.dart';
 import 'transaction_service.dart';
 

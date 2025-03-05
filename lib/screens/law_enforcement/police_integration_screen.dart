@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class PoliceIntegrationScreen extends StatefulWidget {
+  const PoliceIntegrationScreen({super.key});
+
   @override
-  _PoliceIntegrationScreenState createState() =>
-      _PoliceIntegrationScreenState();
+  PoliceIntegrationScreenState createState() =>
+      PoliceIntegrationScreenState();
 }
 
-class _PoliceIntegrationScreenState extends State<PoliceIntegrationScreen> {
+class PoliceIntegrationScreenState extends State<PoliceIntegrationScreen> {
   final _formKey = GlobalKey<FormState>();
   String? caseDescription;
   String? policeStation;

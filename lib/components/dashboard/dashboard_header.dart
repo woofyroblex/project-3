@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class DashboardHeader extends StatelessWidget {
   final String username;
 
-  const DashboardHeader({required this.username, Key? key}) : super(key: key);
+  const DashboardHeader({required this.username, super.key});
 
   @override
   Widget build(BuildContext context) {

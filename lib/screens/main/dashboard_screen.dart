@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:lafa/models/dashboard_item_data.dart';
+import 'package:myapp/models/dashboard_item_data.dart';
 import 'package:provider/provider.dart';
 import '../../components/dashboard/dashboard_card.dart';
 import '../../components/dashboard/notification_icon.dart';
 import '../../components/dashboard/dashboard_header.dart';
-import 'package:lafa/config/routes/app_routes.dart';
-import 'package:lafa/state/user_provider.dart';
-import 'package:lafa/services/notification_service.dart';
+import 'package:myapp/config/routes/app_routes.dart';
+import 'package:myapp/state/user_provider.dart';
+import 'package:myapp/services/notification_service.dart';
 
 class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({Key? key}) : super(key: key);
+  const DashboardScreen({super.key});
 
   @override
-  _DashboardScreenState createState() => _DashboardScreenState();
+  DashboardScreenState createState() => DashboardScreenState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class DashboardScreenState extends State<DashboardScreen> {
   static const List<DashboardItemData> _dashboardItems = [
     DashboardItemData(
       title: 'Report Lost Item',

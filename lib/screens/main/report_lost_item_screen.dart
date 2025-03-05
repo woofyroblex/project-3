@@ -4,11 +4,13 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
 class ReportLostItemScreen extends StatefulWidget {
+  const ReportLostItemScreen({super.key});
+
   @override
-  _ReportLostItemScreenState createState() => _ReportLostItemScreenState();
+  ReportLostItemScreenState createState() => ReportLostItemScreenState();
 }
 
-class _ReportLostItemScreenState extends State<ReportLostItemScreen> {
+class ReportLostItemScreenState extends State<ReportLostItemScreen> {
   final _formKey = GlobalKey<FormState>();
   DateTime? _selectedDate;
   TimeOfDay? _selectedTime;

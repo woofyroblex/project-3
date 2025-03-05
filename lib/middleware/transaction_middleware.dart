@@ -1,4 +1,4 @@
-import 'package:lafa/models/enums.dart';
+import 'package:myapp/models/enums.dart';
 
 import '../services/security_service.dart';
 import '../services/subscription_service.dart';

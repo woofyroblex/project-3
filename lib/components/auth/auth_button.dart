@@ -6,11 +6,11 @@ class AuthButton extends StatelessWidget {
   final bool isFullWidth;
 
   const AuthButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.onPressed,
     this.isFullWidth = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

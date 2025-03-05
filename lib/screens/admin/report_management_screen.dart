@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ReportManagementScreen extends StatefulWidget {
+  const ReportManagementScreen({super.key});
+
   @override
-  _ReportManagementScreenState createState() => _ReportManagementScreenState();
+  ReportManagementScreenState createState() => ReportManagementScreenState();
 }
 
-class _ReportManagementScreenState extends State<ReportManagementScreen> {
+class ReportManagementScreenState extends State<ReportManagementScreen> {
   List<Map<String, String>> reports = [
     {'id': '1', 'title': 'Lost Wallet', 'status': 'Pending'},
     {'id': '2', 'title': 'Found Keys', 'status': 'Resolved'},

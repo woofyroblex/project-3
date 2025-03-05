@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:lafa/models/enums.dart';
+import 'package:myapp/models/enums.dart';
 import '../models/payment_model.dart';
 import '../models/transaction_model.dart';
 

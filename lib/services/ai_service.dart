@@ -2,14 +2,14 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:logger/logger.dart';
 import 'package:tflite/tflite.dart';
-import 'package:lafa/models/ai_model.dart';
-import 'package:lafa/models/found_item_model.dart';
-import 'package:lafa/models/lost_item_model.dart';
-import 'package:lafa/utils/text_similarity.dart';
-import 'package:lafa/utils/image_similarity.dart';
-import 'package:lafa/utils/location_prediction.dart';
-import 'package:lafa/utils/visual_search.dart';
-import 'package:lafa/services/report_service.dart';
+import 'package:myapp/models/ai_model.dart';
+import 'package:myapp/models/found_item_model.dart';
+import 'package:myapp/models/lost_item_model.dart';
+import 'package:myapp/utils/text_similarity.dart';
+import 'package:myapp/utils/image_similarity.dart';
+import 'package:myapp/utils/location_prediction.dart';
+import 'package:myapp/utils/visual_search.dart';
+import 'package:myapp/services/report_service.dart';
 
 class AIService {
   final Logger _logger = Logger();

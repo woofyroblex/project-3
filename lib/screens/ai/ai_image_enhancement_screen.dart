@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class AIEnhancementScreen extends StatefulWidget {
+  const AIEnhancementScreen({super.key});
+
   @override
-  _AIEnhancementScreenState createState() => _AIEnhancementScreenState();
+  AIEnhancementScreenState createState() => AIEnhancementScreenState();
 }
 
-class _AIEnhancementScreenState extends State<AIEnhancementScreen> {
+class AIEnhancementScreenState extends State<AIEnhancementScreen> {
   bool _isProcessing = false;
   String? _enhancedImageUrl;
 
