@@ -9,22 +9,19 @@ class FirebaseTransactionService implements TransactionService {
   final String _collection = 'transactions';
 
   FirebaseTransactionService({FirebaseFirestore? firestore})
-    : _firestore = firestore ?? FirebaseFirestore.instance;
+      : _firestore = firestore ?? FirebaseFirestore.instance;
 
   @override
   Future<List<TransactionModel>> getTransactions() async {
     try {
-      final QuerySnapshot snapshot =
-          await _firestore
-              .collection(_collection)
-              .orderBy('timestamp', descending: true)
-              .get();
+      final QuerySnapshot snapshot = await _firestore
+          .collection(_collection)
+          .orderBy('timestamp', descending: true)
+          .get();
 
       return snapshot.docs
-          .map(
-            (doc) =>
-                TransactionModel.fromJson(doc.data() as Map<String, dynamic>),
-          )
+          .map((doc) =>
+              TransactionModel.fromJson(doc.data() as Map<String, dynamic>))
           .toList();
     } catch (e) {
       throw Exception('Failed to fetch transactions: $e');
@@ -79,12 +76,11 @@ class FirebaseTransactionService implements TransactionService {
   @override
   Future<List<TransactionModel>> fetchUserTransactions(String userId) async {
     try {
-      final querySnapshot =
-          await _firestore
-              .collection(_collection)
-              .where('lostPersonId', isEqualTo: userId)
-              .orderBy('timestamp', descending: true)
-              .get();
+      final querySnapshot = await _firestore
+          .collection(_collection)
+          .where('lostPersonId', isEqualTo: userId)
+          .orderBy('timestamp', descending: true)
+          .get();
 
       return querySnapshot.docs
           .map((doc) => TransactionModel.fromJson(doc.data()))
@@ -104,13 +100,12 @@ class FirebaseTransactionService implements TransactionService {
   }
 
   Future<void> updateTransactionStatus(
-    String transactionId,
-    String status,
-  ) async {
+      String transactionId, String status) async {
     try {
-      await _firestore.collection(_collection).doc(transactionId).update({
-        'status': status,
-      });
+      await _firestore
+          .collection(_collection)
+          .doc(transactionId)
+          .update({'status': status});
     } catch (e) {
       throw Exception('Failed to update transaction status: $e');
     }

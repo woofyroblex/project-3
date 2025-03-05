@@ -26,12 +26,11 @@ class AdminService {
 
   Future<List<UserModel>> getRecentUsers() async {
     try {
-      final snapshot =
-          await _firestore
-              .collection('users')
-              .orderBy('createdAt', descending: true)
-              .limit(10)
-              .get();
+      final snapshot = await _firestore
+          .collection('users')
+          .orderBy('createdAt', descending: true)
+          .limit(10)
+          .get();
 
       return snapshot.docs
           .map((doc) => UserModel.fromJson(doc.data()))
@@ -43,12 +42,11 @@ class AdminService {
 
   Future<List<TransactionModel>> getRecentTransactions() async {
     try {
-      final snapshot =
-          await _firestore
-              .collection('transactions')
-              .orderBy('timestamp', descending: true)
-              .limit(10)
-              .get();
+      final snapshot = await _firestore
+          .collection('transactions')
+          .orderBy('timestamp', descending: true)
+          .limit(10)
+          .get();
 
       return snapshot.docs
           .map((doc) => TransactionModel.fromMap({...doc.data(), 'id': doc.id}))
@@ -60,12 +58,11 @@ class AdminService {
 
   Future<List<ReportModel>> getRecentReports() async {
     try {
-      final snapshot =
-          await _firestore
-              .collection('reports')
-              .orderBy('dateReported', descending: true)
-              .limit(10)
-              .get();
+      final snapshot = await _firestore
+          .collection('reports')
+          .orderBy('dateReported', descending: true)
+          .limit(10)
+          .get();
 
       return snapshot.docs
           .map((doc) => ReportModel.fromJson(doc.data()))

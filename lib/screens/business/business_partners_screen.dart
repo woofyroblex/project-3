@@ -22,21 +22,19 @@ class _BusinessPartnersScreenState extends State<BusinessPartnersScreen> {
 
   void _filterPartners(String query) {
     setState(() {
-      _filteredPartners =
-          _partners
-              .where(
-                (partner) => partner['name']!.toLowerCase().contains(
-                  query.toLowerCase(),
-                ),
-              )
-              .toList();
+      _filteredPartners = _partners
+          .where((partner) =>
+              partner['name']!.toLowerCase().contains(query.toLowerCase()))
+          .toList();
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Business Partners')),
+      appBar: AppBar(
+        title: Text('Business Partners'),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
